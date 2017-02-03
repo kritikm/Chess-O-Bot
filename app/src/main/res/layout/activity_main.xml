@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/table"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.first.kritikm.chessobot.MainActivity">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/testText"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="\u2764"
+        android:textSize="20sp"/>
+
+    <TableRow
+        android:layout_marginTop="90dp">
+        <Button
+            android:id="@+id/leftForward"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:textColor="#fff"
+            android:text="Left Forward"
+            android:elevation="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/leftMotor"/>
+        <Button
+            android:id="@+id/rightForward"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Right Forward"
+            android:elevation="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/rightMotor"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="70dp">
+        <Button
+            android:id="@+id/leftBackward"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:text="Left Backward"
+            android:elevation="15dp"
+            android:backgroundTint="@color/leftMotor"/>
+        <Button
+            android:id="@+id/rightBackward"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:elevation="15dp"
+            android:layout_weight="1"
+            android:text="Right Backward"
+            android:backgroundTint="@color/rightMotor"/>
+    </TableRow>
+
+    <RadioGroup
+        android:id="@+id/speedGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/lowSpeed"
+            android:text="Low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/midSpeed"
+            android:text="Mid"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/highSpeed"
+            android:text="High"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/connStatus"
+        android:textSize="25sp"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connection"/>
+
+</TableLayout>
